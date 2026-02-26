@@ -1,0 +1,118 @@
+baseURL = "https://Anoqu0n.github.io/Blog/"
+defaultContentLanguage = "zh-cn"
+languageCode = "zh-CN"
+title = "Bear0x's Blog"
+theme = "LoveIt"
+paginate = 12
+
+enableRobotsTXT = true
+enableEmoji = true
+
+[author]
+  name = "Bear0x"
+  link = "https://github.com/bear0x"
+
+[menu]
+  [[menu.main]]
+    identifier = "posts"
+    name = "文章"
+    url = "/posts/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "tags"
+    name = "标签"
+    url = "/tags/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "categories"
+    name = "分类"
+    url = "/categories/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    url = "/about/"
+    weight = 4
+
+[params]
+  version = "0.2.X"
+  defaultTheme = "auto"
+  dateFormat = "2006-01-02"
+  images = []
+
+  [params.header]
+    [params.header.title]
+      name = "Bear0x's Blog"
+      post = ""
+      typeit = true
+
+  [params.home]
+    rss = 10
+    [params.home.profile]
+      enable = false
+    [params.home.posts]
+      enable = true
+      paginate = 6
+
+  [params.social]
+
+  [params.page]
+    hiddenFromHomePage = false
+    hiddenFromSearch = false
+    twemoji = false
+    lightgallery = true
+    fraction = true
+    linkToMarkdown = true
+
+    [params.page.toc]
+      enable = true
+      keepStatic = false
+      auto = true
+
+    [params.page.code]
+      copy = true
+      maxShownLines = 50
+
+    [params.page.share]
+      enable = false
+
+    [params.page.comment]
+      enable = false
+
+  [params.search]
+    enable = true
+    type = "lunr"
+    contentLength = 4000
+    placeholder = "搜索文章..."
+    maxResultLength = 10
+    snippetLength = 30
+    highlightTag = "em"
+
+  [params.footer]
+    enable = false
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = false
+    style = "dracula"
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.renderer]
+      unsafe = true
